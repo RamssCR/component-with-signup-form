@@ -1,38 +1,137 @@
-.App {
+:root{
+  --red: #ff7a7a;
+  --green: #38cc8c;
+  --blue: #6055a5;
+  --darkBlue: #3e3c49;
+  --grayishBlue: #b9b6d3;
+  --fontFamily: 'Poppins', sans-serif;
+}
+
+.trial-info{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  color: #fff;
+  padding: 0 2.5em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1em;
+}
+
+.form-section{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.form-section .trial-price{
+  padding: 1em 5em;
+  background-color: var(--blue);
+  width: 21em;
+  display: block;
+  color: #fff;
+  border-radius: 0.7em;
+  box-shadow: 0 0.4em 0 #3e3c4944;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-section .trial-price .bold{
+  font-weight: 600;
+}
+
+.form{
+  width: 21em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  background-color: #fefefe;
+  padding: 1.5em;
+  box-shadow: 0 0.4em 0 #3e3c4944;
+  border-radius: 0.7em;
+}
+
+.form > p {
+  font-size: 0.7em;
+  color: #3e3c4989;
+}
+
+.form > p .red{
+  color: var(--red);
+  font-weight: 600;
+}
+
+.form > p .red:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form div input, .form input{
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.form div{
+  width: 100%;
+  font-weight: 600;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.form input::placeholder{
+  font-weight: 700;
+}
+
+.form div input[type="text"], .form div input[type="email"], .form div input[type="password"]{
+  border: 1px solid #ccc;
+  outline-color: var(--blue);
+}
+
+.form input[type="submit"]{
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.form input[type="submit"]:hover{
+  filter: brightness(1.2);
+}
+
+.error{
+  outline: var(--red);
+}
+
+
+
+@media only screen and (min-width: 1440px){
+  .trial-info{
+    width: 36em;
+    text-align: left;
   }
-  to {
-    transform: rotate(360deg);
+
+  .trial-info h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .form-section .trial-price{
+    width: 28em;
+    padding: 1em 3em;
+  }
+
+  .form{
+    width: 28em;
+    padding: 2em;
+  }
+
+  .form > p{
+    font-size: 0.65em;
   }
 }

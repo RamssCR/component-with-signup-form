@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+  --red: #ff7a7a;
+  --green: #38cc8c;
+  --blue: #6055a5;
+  --darkBlue: #3e3c49;
+  --grayishBlue: #b9b6d3;
+  --fontFamily: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontFamily);
+}
+
+body{
+  background-image: linear-gradient(#ff7a7acc, #ff7a7acc) ,url('../images/bg-intro-mobile.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 140vh;
+  background-size: cover;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+@media only screen and (min-width: 1440px){
+  body{
+    height: 100vh;
+    background-image: linear-gradient(#ff7a7acc, #ff7a7acc), url('../images/bg-intro-desktop.png');
+  }
+
+  main{
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 7em;
+  }
 }
